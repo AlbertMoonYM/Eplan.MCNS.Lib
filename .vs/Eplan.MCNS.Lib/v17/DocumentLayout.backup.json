@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\01.Task\\02. API \uC18C\uC2A4\\01. ProtoType\\Eplan.MCNS.Lib\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2F96F828-E7A2-4466-B483-E4CD384F6FE0}|Eplan.MCNS.Lib.csproj|d:\\01.task\\02. api \uC18C\uC2A4\\01. prototype\\eplan.mcns.lib\\ui cs\\cs_combobox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F96F828-E7A2-4466-B483-E4CD384F6FE0}|Eplan.MCNS.Lib.csproj|solutionrelative:ui cs\\cs_combobox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F96F828-E7A2-4466-B483-E4CD384F6FE0}|Eplan.MCNS.Lib.csproj|d:\\01.task\\02. api \uC18C\uC2A4\\01. prototype\\eplan.mcns.lib\\ui cs\\cs_checkbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F96F828-E7A2-4466-B483-E4CD384F6FE0}|Eplan.MCNS.Lib.csproj|solutionrelative:ui cs\\cs_checkbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F96F828-E7A2-4466-B483-E4CD384F6FE0}|Eplan.MCNS.Lib.csproj|d:\\01.task\\02. api \uC18C\uC2A4\\01. prototype\\eplan.mcns.lib\\ui cs\\cs_groupcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F96F828-E7A2-4466-B483-E4CD384F6FE0}|Eplan.MCNS.Lib.csproj|solutionrelative:ui cs\\cs_groupcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F96F828-E7A2-4466-B483-E4CD384F6FE0}|Eplan.MCNS.Lib.csproj|d:\\01.task\\02. api \uC18C\uC2A4\\01. prototype\\eplan.mcns.lib\\ui cs\\cs_datatable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F96F828-E7A2-4466-B483-E4CD384F6FE0}|Eplan.MCNS.Lib.csproj|solutionrelative:ui cs\\cs_datatable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F96F828-E7A2-4466-B483-E4CD384F6FE0}|Eplan.MCNS.Lib.csproj|d:\\01.task\\02. api \uC18C\uC2A4\\01. prototype\\eplan.mcns.lib\\ui cs\\cs_datagridview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F96F828-E7A2-4466-B483-E4CD384F6FE0}|Eplan.MCNS.Lib.csproj|solutionrelative:ui cs\\cs_datagridview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F96F828-E7A2-4466-B483-E4CD384F6FE0}|Eplan.MCNS.Lib.csproj|d:\\01.task\\02. api \uC18C\uC2A4\\01. prototype\\eplan.mcns.lib\\share cs\\cs_pathdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F96F828-E7A2-4466-B483-E4CD384F6FE0}|Eplan.MCNS.Lib.csproj|solutionrelative:share cs\\cs_pathdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CS_GroupControl.cs",
+              "DocumentMoniker": "D:\\01.Task\\02. API \uC18C\uC2A4\\01. ProtoType\\Eplan.MCNS.Lib\\UI CS\\CS_GroupControl.cs",
+              "RelativeDocumentMoniker": "UI CS\\CS_GroupControl.cs",
+              "ToolTip": "D:\\01.Task\\02. API \uC18C\uC2A4\\01. ProtoType\\Eplan.MCNS.Lib\\UI CS\\CS_GroupControl.cs",
+              "RelativeToolTip": "UI CS\\CS_GroupControl.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T16:54:08.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CS_DataTable.cs",
+              "DocumentMoniker": "D:\\01.Task\\02. API \uC18C\uC2A4\\01. ProtoType\\Eplan.MCNS.Lib\\UI CS\\CS_DataTable.cs",
+              "RelativeDocumentMoniker": "UI CS\\CS_DataTable.cs",
+              "ToolTip": "D:\\01.Task\\02. API \uC18C\uC2A4\\01. ProtoType\\Eplan.MCNS.Lib\\UI CS\\CS_DataTable.cs",
+              "RelativeToolTip": "UI CS\\CS_DataTable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T16:54:07.337Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CS_DataGridView.cs",
+              "DocumentMoniker": "D:\\01.Task\\02. API \uC18C\uC2A4\\01. ProtoType\\Eplan.MCNS.Lib\\UI CS\\CS_DataGridView.cs",
+              "RelativeDocumentMoniker": "UI CS\\CS_DataGridView.cs",
+              "ToolTip": "D:\\01.Task\\02. API \uC18C\uC2A4\\01. ProtoType\\Eplan.MCNS.Lib\\UI CS\\CS_DataGridView.cs",
+              "RelativeToolTip": "UI CS\\CS_DataGridView.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T16:54:06.355Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CS_ComboBox.cs",
+              "DocumentMoniker": "D:\\01.Task\\02. API \uC18C\uC2A4\\01. ProtoType\\Eplan.MCNS.Lib\\UI CS\\CS_ComboBox.cs",
+              "RelativeDocumentMoniker": "UI CS\\CS_ComboBox.cs",
+              "ToolTip": "D:\\01.Task\\02. API \uC18C\uC2A4\\01. ProtoType\\Eplan.MCNS.Lib\\UI CS\\CS_ComboBox.cs",
+              "RelativeToolTip": "UI CS\\CS_ComboBox.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB0AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T16:54:04.224Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CS_CheckBox.cs",
+              "DocumentMoniker": "D:\\01.Task\\02. API \uC18C\uC2A4\\01. ProtoType\\Eplan.MCNS.Lib\\UI CS\\CS_CheckBox.cs",
+              "RelativeDocumentMoniker": "UI CS\\CS_CheckBox.cs",
+              "ToolTip": "D:\\01.Task\\02. API \uC18C\uC2A4\\01. ProtoType\\Eplan.MCNS.Lib\\UI CS\\CS_CheckBox.cs",
+              "RelativeToolTip": "UI CS\\CS_CheckBox.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T16:54:03.032Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CS_PathData.cs",
+              "DocumentMoniker": "D:\\01.Task\\02. API \uC18C\uC2A4\\01. ProtoType\\Eplan.MCNS.Lib\\Share CS\\CS_PathData.cs",
+              "RelativeDocumentMoniker": "Share CS\\CS_PathData.cs",
+              "ToolTip": "D:\\01.Task\\02. API \uC18C\uC2A4\\01. ProtoType\\Eplan.MCNS.Lib\\Share CS\\CS_PathData.cs",
+              "RelativeToolTip": "Share CS\\CS_PathData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T16:53:53.148Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
