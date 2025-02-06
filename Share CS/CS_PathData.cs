@@ -18,13 +18,14 @@ namespace Eplan.MCNS.Lib.Share_CS
         public static string BasicTempletFilePath { get; set; }
         //public static string BasicPageMacroFolderPath { get; set; }
         public static string MacroFolderPath { get; set; }
-        
-         
+
+
         // 파일 경로
         public static string ConfigFilePath { get; set; }
         public static string ItemListFilePath {  get; set; }
         public static string IoListFilePath { get; set; }
-        
+        public static string MccbFilePath { get; set; }
+
 
         // 엔지니어링 데이터 Xml 파일 저장 위치
         public static string XmlFolderPath { get; set; } = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
