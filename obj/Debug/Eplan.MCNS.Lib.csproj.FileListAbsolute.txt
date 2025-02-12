@@ -258,3 +258,7 @@ C:\Users\kr70009769\Desktop\01.Task\02. API 소스\03. C#\Eplan.MCNS.Lib\obj\Deb
 C:\Users\kr70009769\Desktop\01.Task\02. API 소스\03. C#\Eplan.MCNS.Lib\obj\Debug\Eplan.MC.032AB423.Up2Date
 C:\Users\kr70009769\Desktop\01.Task\02. API 소스\03. C#\Eplan.MCNS.Lib\obj\Debug\Eplan.MCNS.Lib.dll
 C:\Users\kr70009769\Desktop\01.Task\02. API 소스\03. C#\Eplan.MCNS.Lib\obj\Debug\Eplan.MCNS.Lib.pdb
+C:\Users\kr70009769\Desktop\01.Task\02. API 소스\03. C#\Eplan.MCNS.Lib\bin\Debug\Microsoft.WindowsAPICodePack.dll
+C:\Users\kr70009769\Desktop\01.Task\02. API 소스\03. C#\Eplan.MCNS.Lib\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Users\kr70009769\Desktop\01.Task\02. API 소스\03. C#\Eplan.MCNS.Lib\bin\Debug\Microsoft.WindowsAPICodePack.xml
+C:\Users\kr70009769\Desktop\01.Task\02. API 소스\03. C#\Eplan.MCNS.Lib\bin\Debug\Microsoft.WindowsAPICodePack.Shell.xml
