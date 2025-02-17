@@ -38,7 +38,7 @@ namespace Eplan.MCNS.Lib
                     Label lblBar = new Label();
 
                     pnlBar.Size = new Size(5, tabPage.Height); // 패널 크기 조정
-                    pnlBar.BackColor = Color.Silver;
+                    pnlBar.BackColor = ColorTranslator.FromHtml("#379852");
                     pnlBar.Cursor = Cursors.Hand;
                     pnlBar.Dock = DockStyle.Left;
 

@@ -33,7 +33,7 @@ namespace Eplan.MCNS.Lib
                 else if (string.IsNullOrEmpty(inputValue))
                 {
                     e.DisplayText = unit; // 값이 없으면 단위만 표시
-                    cb.BackColor = Color.LightGray;
+                    cb.BackColor = Color.LightSteelBlue;
                     cb.ForeColor = Color.Gray;
                 }
                 else if (double.TryParse(inputValue, NumberStyles.Any, CultureInfo.InvariantCulture, out _) && displayUnit == true)
