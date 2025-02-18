@@ -16,7 +16,6 @@ namespace Eplan.MCNS.Lib.Share_CS
         // 폴더 경로
         public static string PrjFolderPath { get; set; }
         public static string BasicTempletFilePath { get; set; }
-        //public static string BasicPageMacroFolderPath { get; set; }
         public static string MacroFolderPath { get; set; }
 
 
