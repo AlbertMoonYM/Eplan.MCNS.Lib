@@ -19,6 +19,7 @@ namespace Eplan.MCNS.Lib
         {
             // 기본 스타일 설정
             cb.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            cb.Properties.AutoComplete = true;
             cb.Font = new Font("맑은 고딕", 10);
 
             cb.Properties.CustomDisplayText += (o, e) =>
