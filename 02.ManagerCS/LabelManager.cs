@@ -9,7 +9,7 @@ namespace Eplan.MCNS.Lib
     /// <summary>
     /// 모든 라벨 객체 제어를 위한 클래스
     /// </summary>
-    public class CS_Label
+    public class LabelManager
     {
         // 상태를 저장할 변수 선언
         private Dictionary<LabelControl, bool> hoverStates = new Dictionary<LabelControl, bool>();
@@ -38,7 +38,7 @@ namespace Eplan.MCNS.Lib
                 hoverStates[lbl] = false;
                 if (!clickStates[lbl]) // 클릭된 상태가 아니면 기본 색상으로 복귀
                 {
-                    lbl.ForeColor = CS_StaticEtc.colors[0]; // 기본 색상
+                    lbl.ForeColor = ColorUtility.colors[Ecolor.TextBlack]; // 기본 색상
                     lbl.Invalidate();
                 }
             };
@@ -53,18 +53,6 @@ namespace Eplan.MCNS.Lib
                 lastClickedLabel = lbl; // 현재 클릭된 라벨을 저장
             };
 
-            //// 라벨이 호버 상태일 때 페인팅 처리
-            //lbl.Paint += (sender, e) =>
-            //{
-            //    if (hoverStates[lbl])
-            //    {
-            //        int lineY = (int)lbl.Font.GetHeight() + 15;
-            //        using (Pen pen = new Pen(lbl.ForeColor, 3))
-            //        {
-            //            e.Graphics.DrawLine(pen, 0, lineY, lbl.Width, lineY);
-            //        }
-            //    }
-            //};
         }
 
         private void ResetPreviousLabel()
@@ -73,7 +61,7 @@ namespace Eplan.MCNS.Lib
             if (lastClickedLabel != null)
             {
                 clickStates[lastClickedLabel] = false;
-                lastClickedLabel.ForeColor = CS_StaticEtc.colors[0]; // 기본 색상
+                lastClickedLabel.ForeColor = ColorUtility.colors[Ecolor.TextBlack]; // 기본 색상
                 lastClickedLabel.Invalidate();
             }
         }

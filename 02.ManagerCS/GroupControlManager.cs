@@ -5,7 +5,7 @@ using System.Drawing;
 
 namespace Eplan.MCNS.Lib
 {
-    public class CS_GroupControl
+    public class GroupControlManager
     {
         /// <summary>
         /// 그룹박스 최대화, 최소화 size(120,25)

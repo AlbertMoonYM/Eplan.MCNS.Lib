@@ -8,9 +8,9 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using Microsoft.WindowsAPICodePack.Dialogs;
 
-namespace Eplan.MCNS.Lib.UI_CS
+namespace Eplan.MCNS.Lib
 {    
-    public class CS_Button
+    public class ButtonManager
     {
         // 이전 폴더 경로만 저장하는 변수
         private string lastFolderPath = string.Empty;

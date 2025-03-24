@@ -16,7 +16,7 @@ using GridView = DevExpress.XtraGrid.Views.Grid.GridView;
 
 namespace Eplan.MCNS.Lib
 {
-    public class CS_DataGridView
+    public class GridViewManager
     {
         /// <summary>
         /// DataTable을 기준으로 DataGrid 생성
@@ -226,6 +226,7 @@ namespace Eplan.MCNS.Lib
             gv.Columns["ADD."].OptionsColumn.AllowEdit = true;
             gv.Columns["SIGNAL"].OptionsColumn.AllowEdit = true;
             gv.Columns["DESCRIPTION"].OptionsColumn.AllowEdit = true;
+            gv.Columns["센서"].OptionsColumn.AllowEdit = true;
             gv.Columns["구분"].Visible = false;
             gv.Columns["포함조건"].Visible = false;
             gv.Columns["제외조건"].Visible = false;
@@ -233,12 +234,16 @@ namespace Eplan.MCNS.Lib
             // "기능" 열을 콤보박스로 설정 (아이템 선택 전용)
             var cbFunc = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             var cbType = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
+            var cbSensor = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             cbFunc.Items.AddRange(new[] { "ELEQ", "LIFT", "TRAV", "TRAV2", "FORK", "FORK2", "CARR" });
             cbType.Items.AddRange(new[] { "AUX-C", "PHO-G", "PHO-T", "LIM-S", "PRO-X", "PHO-D" });
+            cbSensor.Items.AddRange(new[] { "정위치 센서", "리미트스위치", "화물 센서", "이중 입고"});
             cbFunc.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor; // 입력 비활성화
             cbType.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor; // 입력 비활성화
+            cbSensor.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor; // 입력 비활성화
             gv.Columns["기능"].ColumnEdit = cbFunc;
             gv.Columns["타입"].ColumnEdit = cbType;
+            gv.Columns["센서"].ColumnEdit = cbSensor;
 
             // 열의 너비를 내용에 맞게 조정
             gv.BestFitColumns();
