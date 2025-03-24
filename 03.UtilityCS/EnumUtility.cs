@@ -13,4 +13,17 @@ namespace Eplan.MCNS.Lib
         fltFlag = 1,
         strFlag = 2,
     }
+    public enum Ecolor
+    {
+        Disable,
+        Active,
+        InActTextBox,
+        InActComboBox,
+        Logo,
+        TextBlack,
+        TextGray,
+        HmxGreen,
+        HmxYellow,
+        HmxBlue,
+    }
 }

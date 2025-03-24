@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace Eplan.MCNS.Lib
 {
-    public class CS_XtraTabControl
+    public class XtraTabControlManager
     {
         /// <summary>
         /// 기능명 상세 보여주기

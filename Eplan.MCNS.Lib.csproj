@@ -135,25 +135,24 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="05. VariableChangeActionCS\BoolAct.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Share CS\CS_PathData.cs" />
-    <Compile Include="UI CS\CS_Button.cs" />
-    <Compile Include="UI CS\CS_CheckBox.cs" />
-    <Compile Include="UI CS\CS_ComboBox.cs" />
-    <Compile Include="UI CS\CS_DataGridView.cs" />
-    <Compile Include="UI CS\CS_DataTable.cs" />
-    <Compile Include="UI CS\CS_Enum.cs" />
-    <Compile Include="UI CS\CS_GroupControl.cs" />
-    <Compile Include="UI CS\CS_InterLock.cs" />
-    <Compile Include="UI CS\CS_Label.cs" />
-    <Compile Include="UI CS\CS_ListItems.cs" />
-    <Compile Include="UI CS\CS_PathCheck.cs" />
-    <Compile Include="UI CS\CS_PdfExport.cs" />
-    <Compile Include="UI CS\CS_StaticEtc.cs" />
-    <Compile Include="UI CS\CS_StaticSensor.cs" />
-    <Compile Include="UI CS\CS_StaticString.cs" />
-    <Compile Include="UI CS\CS_StaticUnit.cs" />
-    <Compile Include="UI CS\CS_XtraTabControl.cs" />
+    <Compile Include="02.ManagerCS\ButtonManager.cs" />
+    <Compile Include="02.ManagerCS\CheckboxManager.cs" />
+    <Compile Include="02.ManagerCS\ComboBoxManager.cs" />
+    <Compile Include="01.UnitCS\DictionaryUnits.cs" />
+    <Compile Include="02.ManagerCS\GridViewManager.cs" />
+    <Compile Include="02.ManagerCS\DataTableManager.cs" />
+    <Compile Include="03.UtilityCS\EnumUtility.cs" />
+    <Compile Include="02.ManagerCS\GroupControlManager.cs" />
+    <Compile Include="04.InterLockCS\InterLockLibrary.cs" />
+    <Compile Include="02.ManagerCS\LabelManager.cs" />
+    <Compile Include="02.ManagerCS\FilePathManager.cs" />
+    <Compile Include="03.UtilityCS\ColorUtility.cs" />
+    <Compile Include="01.UnitCS\DataTableUnits.cs" />
+    <Compile Include="01.UnitCS\ControlUnits.cs" />
+    <Compile Include="02.ManagerCS\XtraTabControlManager.cs" />
+    <Compile Include="01.UnitCS\StringUnits.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="2639_Public.snk" />

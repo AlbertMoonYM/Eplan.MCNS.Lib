@@ -12,7 +12,7 @@ using System.Globalization; // 숫자 변환을 위해 필요
 
 namespace Eplan.MCNS.Lib
 {
-    public class CS_ComboBox
+    public class ComboBoxManager
     {
 
         public void SettingComboBox(ComboBoxEdit cb, string unit, bool displayUnit)
@@ -28,26 +28,26 @@ namespace Eplan.MCNS.Lib
 
                 if (!cb.Enabled)
                 {
-                    cb.BackColor = Color.LightCoral;
+                    cb.BackColor = ColorUtility.colors[Ecolor.Disable];
                     e.DisplayText = "";
                 }
                 else if (string.IsNullOrEmpty(inputValue))
                 {
                     e.DisplayText = unit; // 값이 없으면 단위만 표시
-                    cb.BackColor = Color.LightSteelBlue;
-                    cb.ForeColor = Color.Gray;
+                    cb.BackColor = ColorUtility.colors[Ecolor.InActComboBox];
+                    cb.ForeColor = ColorUtility.colors[Ecolor.TextGray];
                 }
                 else if (double.TryParse(inputValue, NumberStyles.Any, CultureInfo.InvariantCulture, out _) && displayUnit == true)
                 {
                     e.DisplayText = inputValue + " " + unit; // UI에서 숫자 + 단위 형식으로 표시
-                    cb.BackColor = Color.White;
-                    cb.ForeColor = Color.Black;
+                    cb.BackColor = ColorUtility.colors[Ecolor.Active];
+                    cb.ForeColor = ColorUtility.colors[Ecolor.TextBlack];
                 }
                 else
                 {
                     e.DisplayText = inputValue; // 숫자가 아니면 그대로 출력
-                    cb.BackColor = Color.White;
-                    cb.ForeColor = Color.Black;
+                    cb.BackColor = ColorUtility.colors[Ecolor.Active];
+                    cb.ForeColor = ColorUtility.colors[Ecolor.TextBlack];
                 }
             };
             cb.KeyPress += (sender, e) =>
@@ -60,8 +60,8 @@ namespace Eplan.MCNS.Lib
             };
             cb.Enter += (sender, e) =>
             {
-                cb.BackColor = Color.White;
-                cb.ForeColor = Color.Black;
+                cb.BackColor = ColorUtility.colors[Ecolor.Active];
+                cb.ForeColor = ColorUtility.colors[Ecolor.TextBlack];
             };
         }
 
@@ -78,35 +78,37 @@ namespace Eplan.MCNS.Lib
 
                 if (!cb.Enabled)
                 {
-                    cb.BackColor = Color.LightCoral;
+                    cb.BackColor = ColorUtility.colors[Ecolor.Disable];
                     e.DisplayText = "";
                 }
                 else if (string.IsNullOrEmpty(inputValue))
                 {
                     e.DisplayText = unit; // 값이 없으면 단위만 표시
-                    cb.BackColor = Color.LightGray;
-                    cb.ForeColor = Color.Gray;
+                    cb.BackColor = ColorUtility.colors[Ecolor.InActTextBox];
+                    cb.ForeColor = ColorUtility.colors[Ecolor.TextGray];
                 }
                 else if (decimal.TryParse(inputValue, NumberStyles.Any, CultureInfo.InvariantCulture, out decimal result) && displayUnit)
                 {
                     // 소수점 이하 0을 제거한 값을 표시
                     string formattedValue = result.ToString("0.##"); // "0.##" 형식은 소수점 아래 불필요한 0을 제거
                     e.DisplayText = formattedValue + " " + unit; // UI에서 숫자 + 단위 형식으로 표시
-                    cb.BackColor = Color.White;
-                    cb.ForeColor = Color.Black;
+
+                    cb.BackColor = ColorUtility.colors[Ecolor.Active];
+                    cb.ForeColor = ColorUtility.colors[Ecolor.TextBlack];
                 }
                 else
                 {
                     e.DisplayText = inputValue; // 숫자가 아니면 그대로 출력
-                    cb.BackColor = Color.White;
-                    cb.ForeColor = Color.Black;
+
+                    cb.BackColor = ColorUtility.colors[Ecolor.Active];
+                    cb.ForeColor = ColorUtility.colors[Ecolor.TextBlack];
                 }
             };
 
             cb.Enter += (sender, e) =>
             {
-                cb.BackColor = Color.White;
-                cb.ForeColor = Color.Black;
+                cb.BackColor = ColorUtility.colors[Ecolor.Active];
+                cb.ForeColor = ColorUtility.colors[Ecolor.TextBlack];
             };
 
             cb.KeyPress += (sender, e) =>

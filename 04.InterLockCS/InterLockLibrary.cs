@@ -1,6 +1,5 @@
 ﻿using DevExpress.XtraEditors;
 using DevExpress.XtraTab;
-using Eplan.MCNS.Lib.UI_CS;
 using Microsoft.SqlServer.Server;
 using System;
 using System.Collections.Generic;
@@ -12,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Eplan.MCNS.Lib
 {
-    public class CS_InterLock
+    public class InterLockLibrary
     {
 
         public void ActivatePageByText(Control[] baseCtrls, string[] triggerStrs, XtraTabControl xtraCtrl, int indexNum)
@@ -178,8 +177,6 @@ namespace Eplan.MCNS.Lib
         public void UpdateFullText(Control baseCtrl, Control[] ctrls)
         {
             baseCtrl.Hide();
-            baseCtrl.ForeColor = Color.Blue;
-            baseCtrl.BackColor = Color.Gray;
 
             // 기존 핸들러 제거 (중복 호출 방지)
             foreach (Control ctrl in ctrls)
@@ -209,21 +206,21 @@ namespace Eplan.MCNS.Lib
 
             void OnControlTextChanged(object sender, EventArgs e)
             {
-                
                 string fullText = "";
+                List<string> textParts = new List<string>(); // 개별 텍스트를 저장할 리스트
 
                 // ctrls[0], ctrls[1], ctrls[2]의 BackColor가 모두 흰색이 아닌 경우 baseCtrl을 숨김
-                if (ctrls[0].BackColor != Color.White ||
-                    ctrls[1].BackColor != Color.White ||
-                    ctrls[2].BackColor != Color.White )
+                if (ctrls[0].BackColor != ColorUtility.colors[Ecolor.Active] ||
+                    ctrls[1].BackColor != ColorUtility.colors[Ecolor.Active] ||
+                    ctrls[2].BackColor != ColorUtility.colors[Ecolor.Active])
                 {
-                    baseCtrl.Hide(); // baseCtrl을 숨김
-                    return; // 이후 코드를 실행하지 않음
+                    baseCtrl.Hide();
+                    return;
                 }
                 else
                 {
-                    baseCtrl.BackColor = Color.White;
-                    baseCtrl.Show(); // 조건을 만족하면 baseCtrl을 표시
+                    baseCtrl.BackColor = ColorUtility.colors[Ecolor.Active];
+                    baseCtrl.Show();
                 }
 
                 for (int i = 0; i < ctrls.Length; i++)
@@ -231,32 +228,34 @@ namespace Eplan.MCNS.Lib
                     // BackColor가 흰색이고, Visible이 true인 경우에만 Text를 추가
                     if (ctrls[i].ForeColor == Color.Black && ctrls[i].Visible)
                     {
-                        if (i == 2)
+                        string text = ctrls[i].Text;
+
+                        if (!string.IsNullOrEmpty(text))
                         {
-                            fullText += "-" + ctrls[i].Text;
-                        }
-                        else if (i == 4)
-                        {
-                            fullText += "-" + ctrls[i].Text;
-                        }
-                        else
-                        {
-                            fullText += ctrls[i].Text;
+                            // i가 2 또는 4일 때 앞에 "-"를 추가 (리스트에 저장할 때)
+                            if (i == 2 || i == 4)
+                            {
+                                textParts.Add("-" + text);
+                            }
+                            else
+                            {
+                                textParts.Add(text);
+                            }
                         }
                     }
                     // i가 3이고, ctrls[i]가 CheckBox인 경우
-                    else if (i == 3)
+                    else if (i == 3 && ctrls[i] is CheckEdit cb && cb.Checked)
                     {
-                        if (ctrls[3] is CheckEdit cb && cb.Checked)
-                        {
-                            fullText += cb.Text;  // CheckBox가 체크된 경우 텍스트 추가
-                        }
+                        textParts.Add(cb.Text);
                     }
                 }
-                
+
+                // 리스트의 첫 번째 요소가 "-"로 시작하는 경우 제거 (불필요한 "-" 방지)
+                fullText = string.Join("", textParts).TrimStart('-');
+
                 // 결과를 baseCtrl에 설정
                 baseCtrl.Text = fullText;
-                CS_StaticUnit.strModFullName = fullText;
+                StringUnits.strModFullName = fullText;
             }
         }
 
@@ -349,6 +348,86 @@ namespace Eplan.MCNS.Lib
             };
         }
 
+        public void FilterComboBox(ComboBoxEdit currentCb, ComboBoxEdit nextCb, List<string> items, params ComboBoxEdit[] previousCbs)
+        {
+            // White 배경일 때만 필터링을 적용하고 다음 ComboBox를 보여줍니다.
+            if (currentCb.BackColor == ColorUtility.colors[Ecolor.Active])
+            {
+                // 모든 이전 ComboBox와 현재 ComboBox에서 선택된 최대 인덱스를 가져옵니다.
+                int maxIndex = previousCbs
+                    .Append(currentCb)
+                    .Select(cb => items.IndexOf(cb.Text))
+                    .Where(index => index >= 0)
+                    .DefaultIfEmpty(-1)
+                    .Max();
+
+                // 필터링된 리스트 설정
+                nextCb.Show();
+                nextCb.Properties.Items.Clear();
+                nextCb.Properties.Items.AddRange(items
+                    .Where((_, i) => i > maxIndex)
+                    .ToArray());
+            }
+        }
+
+        public void UpdateComboBoxVisibility(ComboBoxEdit[] cbMODoptions)
+        {
+            for (int i = 0; i < cbMODoptions.Length - 1; i++)
+            {
+                // EditValue가 빈 문자열("")인 경우
+                if (string.IsNullOrEmpty(cbMODoptions[i].EditValue?.ToString()))
+                {
+                    // i 이후의 콤보박스를 모두 숨기고 선택된 인덱스를 초기화
+                    for (int j = i + 1; j < cbMODoptions.Length; j++)
+                    {
+                        cbMODoptions[j].Hide();
+                        cbMODoptions[j].SelectedIndex = -1;
+                    }
+                    break; // 이후 콤보박스를 더 이상 확인하지 않도록 루프 종료
+                }
+                else
+                {
+                    // EditValue가 빈 문자열이 아니면 그 다음 콤보박스를 보이게 설정
+                    if (i + 1 < cbMODoptions.Length)
+                    {
+                        cbMODoptions[i + 1].Show();
+                    }
+                }
+            }
+        }
+
+        public void SetFlagValue(Control[] controls, Action<bool> setFlag, string strMatch = "")
+        {
+            void UpdateFlag()
+            {
+                bool isCheckBoxChecked = controls
+                    .OfType<CheckEdit>()
+                    .Any(ckb => ckb.Checked);
+
+                bool anyComboBoxMatch = controls
+                    .OfType<ComboBoxEdit>()
+                    .Any(cb => (cb.EditValue?.ToString() ?? "") == strMatch);
+
+                // 체크박스가 체크되었거나, 콤보박스 중 하나라도 일치하는 항목이 있을 때 true
+                setFlag(isCheckBoxChecked || anyComboBoxMatch);
+            }
+
+            foreach (var ctrl in controls)
+            {
+                if (ctrl is CheckEdit ckb)
+                {
+                    ckb.CheckStateChanged += (o, e) => UpdateFlag();
+                }
+                else if (ctrl is ComboBoxEdit cb)
+                {
+                    cb.TextChanged += (o, e) => UpdateFlag();
+                }
+            }
+
+            // 초기 상태 업데이트
+            UpdateFlag();
+        }
+        
 
         /*
         void UpdateTargetText(string triggerStr, bool add)

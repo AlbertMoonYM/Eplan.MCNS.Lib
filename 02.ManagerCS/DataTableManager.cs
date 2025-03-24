@@ -17,7 +17,7 @@ using Label = System.Windows.Forms.Label;
 
 namespace Eplan.MCNS.Lib
 {
-    public class CS_DataTable
+    public class DataTableManager
     {
         
         public void GetDataTable(DataTable dt, string[,] dArrStrColumsSet )
